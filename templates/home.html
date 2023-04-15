@@ -11,15 +11,25 @@
       #banner {
         height: 360px;
         width: 100%;
+        object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    {% include 'nav.html' %}
+     <img class="img-responsive" alt="Responsive image" id="banner" src="https://jong-first-webpage.jong-weonweon.repl.co/static/banner_writing.jpg">
+   <div class="container">
     <h1 class="text-center mt-4 mb-4">Improve English Writing: {{company_name}}</h1>
-    <img class="img-responsive" alt="Responsive image" id="banner" src="https://jong-first-webpage.jong-weonweon.repl.co/static/banner_writing.jpg">
     <h2 class="text-center mt-2 mb-4">Step 1: Read extensively</h2>
+     <div class="row" style="margin-bottom:16px">
+       <div class="col-md-6">
     <p class="lead">Reading extensively is essential for developing your writing skills. It exposes you to different writing styles, sentence structures, vocabulary, and ideas that can inspire and inform your writing. Read a variety of materials, such as books, newspapers, magazines, blogs, and academic articles. Pay attention to the language used, the organization of ideas, and the tone of the writing.</p>
+       </div>
+       <div class="d-none d-md-block col-md-6">
+       <img src="/static/pen_writing.jpg" style="height:320px; border-radius:4px;">
+       </div>
+     </div>
     <h2 class="text-center mt-2 mb-4">Step 2: Practice writing regularly</h2>
     <p class="lead">Writing regularly is crucial for improving your writing skills. Set aside some time every day to write, even if it's just for 10-15 minutes. You can start with simple exercises, such as writing a journal entry, a summary of a reading, or a reflection on a topic. As you progress, you can try more challenging tasks, such as writing an essay, a research paper, or a creative piece.</p>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
@@ -32,7 +42,7 @@
     </div>
     <div class="text-center">
     <button class="btn btn-primary btn-lg">Contact Us</button>
-    <p class="mt-4">Copyright 2023, Jong Weon Lee</p>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
